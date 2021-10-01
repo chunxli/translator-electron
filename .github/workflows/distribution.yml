@@ -26,8 +26,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: "[command] ls && cd ./Translator-Electron && npm install && npm run make"
-        run: ls && cd ./Translator-Electron && npm install && npm run make
+      - name: "[command] npm install && npm run make"
+        run: npm install && npm run make
       
         
   # This workflow contains a single job called "build"
@@ -41,8 +41,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: "[command] ls && cd ./Translator-Electron && npm install && npm run make"
-        run: ls && cd ./Translator-Electron && npm install && npm run make
+      - name: "[command] npm install && npm run make"
+        run: npm install && npm run make
         
   # This workflow contains a single job called "build"
   build-on-windows:
@@ -55,6 +55,6 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: "[command] ls && cd ./Translator-Electron && npm install && npm run make"
-        run: ls && cd ./Translator-Electron && npm install && npm run make
+      - name: "[command] npm install && npm run make"
+        run: npm install && npm run make
     

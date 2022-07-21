@@ -4,10 +4,16 @@ const isMac = process.platform === 'darwin'
 let win
 let isOnTop = false
 
+const autoUpdater = require("electron-updater");
+
 function createWindow () {
     app.on('window-all-closed', function () {
         if (process.platform !== 'darwin') app.quit()
     })
+
+    app.on("ready", () => {
+      autoUpdater.checkForUpdatesAndNotify();
+    });
 
     win = new BrowserWindow({ width: 500, height: 700 })
     win.loadURL("https://translate.google.cn/?hl=en")

@@ -1,13 +1,30 @@
 {
-  "name": "translatorwrapper",
-  "version": "1.0.0",
+  "name": "translator",
+  "build": {
+		"appId": "com.chunxli.translator",
+		"productName": "Translator",
+		"mac": {
+			"category": "public.app-category.productivity"
+		},
+		"dmg": {
+			"icon": false
+		},
+		"linux": {
+			"target": ["AppImage"],
+			"category": "Office"
+		}
+	},
+  "version": "0.0.2",
   "description": "This is A Translator",
   "main": "index.js",
   "scripts": {
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "postinstall": "electron-builder install-app-deps",
+		"build": "electron-builder --mac --windows --linux",
+		"release": "electron-builder --mac --windows --linux --publish always"
   },
   "author": "Kevin Li",
   "license": "ISC",
@@ -22,8 +39,7 @@
     "electron-builder": "^23.1.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
-    "electron-updater": "^5.0.5"
+    "electron-squirrel-startup": "^1.0.0"
   },
   "config": {
     "forge": {

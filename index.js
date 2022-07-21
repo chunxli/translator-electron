@@ -29,7 +29,7 @@ app.whenReady().then(() => {
 
 
 const template = [
-    // { role: 'appMenu' }
+    // { role: 'appMenu'  }
     ...(isMac ? [{
       label: app.name,
       submenu: [

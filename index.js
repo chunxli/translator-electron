@@ -16,7 +16,7 @@ function createWindow () {
     // });
 
     win = new BrowserWindow({ width: 500, height: 700 })
-    win.loadURL("https://translate.google.cn/?hl=en")
+    win.loadURL("https://translate.google.com")
     // win.setAlwaysOnTop("true")
     Menu.setApplicationMenu()
 }
